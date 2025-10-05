@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Converged & Hyperconverged Systems",
+    "subtitle": "Simplify your IT infrastructure with integrated compute, storage, and networking. Accelerate deployment and reduce complexity.",
+    "ctaPrimary": "Explore Solutions",
+    "ctaSecondary": "ROI Calculator"
+  },
+  "overview": {
+    "title": "Unified Infrastructure Solutions",
+    "description": "Deploy pre-integrated systems that combine compute, storage, networking, and virtualization into a single platform. Reduce time-to-value and operational overhead."
+  },
+  "services": {
+    "title": "Infrastructure Services",
+    "items": [
+      {
+        "name": "Hyperconverged Infrastructure",
+        "description": "Software-defined HCI solutions for simplified management"
+      },
+      {
+        "name": "Converged Systems",
+        "description": "Pre-validated reference architectures from leading vendors"
+      },
+      {
+        "name": "Virtual Desktop Infrastructure",
+        "description": "Scalable VDI solutions for secure remote work"
+      },
+      {
+        "name": "Private Cloud Platforms",
+        "description": "Build on-premises cloud with public cloud experience"
+      },
+      {
+        "name": "Edge Computing",
+        "description": "Deploy infrastructure at the edge for low-latency applications"
+      },
+      {
+        "name": "Lifecycle Management",
+        "description": "Automated updates and management across the stack"
+      }
+    ]
+  }
+}

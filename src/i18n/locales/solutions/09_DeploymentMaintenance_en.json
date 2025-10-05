@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Deployment & Maintenance",
+    "subtitle": "Professional deployment and ongoing maintenance for servers, storage, and networking infrastructure. Maximize uptime and performance.",
+    "ctaPrimary": "Schedule Service",
+    "ctaSecondary": "Service Plans"
+  },
+  "overview": {
+    "title": "Expert Infrastructure Services",
+    "description": "From initial deployment to ongoing maintenance, our certified engineers ensure your infrastructure operates at peak performance with minimal disruption."
+  },
+  "services": {
+    "title": "Service Offerings",
+    "items": [
+      {
+        "name": "Server Deployment",
+        "description": "Professional installation and configuration of physical and virtual servers"
+      },
+      {
+        "name": "Storage Setup",
+        "description": "Deploy and configure enterprise storage systems"
+      },
+      {
+        "name": "Network Implementation",
+        "description": "Design, deploy, and optimize network infrastructure"
+      },
+      {
+        "name": "Preventive Maintenance",
+        "description": "Regular health checks and proactive issue resolution"
+      },
+      {
+        "name": "Break-Fix Support",
+        "description": "Rapid response to hardware failures and critical issues"
+      },
+      {
+        "name": "Firmware Management",
+        "description": "Keep systems current with tested firmware updates"
+      }
+    ]
+  }
+}

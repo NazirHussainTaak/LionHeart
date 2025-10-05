@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Identity Management",
+    "subtitle": "Secure, scalable identity and access management solutions. Control who has access to what, when, and from where.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "IAM Assessment"
+  },
+  "overview": {
+    "title": "Enterprise Identity & Access Management",
+    "description": "Implement comprehensive IAM solutions that provide secure authentication, authorization, and identity governance across your organization."
+  },
+  "services": {
+    "title": "IAM Services",
+    "items": [
+      {
+        "name": "Single Sign-On (SSO)",
+        "description": "One set of credentials for all enterprise applications"
+      },
+      {
+        "name": "Multi-Factor Authentication",
+        "description": "Add extra security layers with MFA/2FA"
+      },
+      {
+        "name": "Privileged Access Management",
+        "description": "Control and monitor privileged account access"
+      },
+      {
+        "name": "Identity Governance",
+        "description": "Automate access reviews and compliance reporting"
+      },
+      {
+        "name": "Directory Services",
+        "description": "Centralized user and device management"
+      },
+      {
+        "name": "Federation & Integration",
+        "description": "Connect identity systems across cloud and on-premises"
+      }
+    ]
+  }
+}
