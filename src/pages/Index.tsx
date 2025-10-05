@@ -5,13 +5,17 @@ import SolutionsSection from "@/pages/home/04-SolutionsSection";
 import TechnologiesSection from "@/pages/home/05-TechnologiesSection";
 import TestimonialsSection from "@/pages/home/06-TestimonialsSection";
 import LeadershipSection from "@/pages/home/07-LeadershipSection";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
 
       <HeroSection />
-      <ValuePillarsSection />
+      <AnimatedSection animation="fade-slide">
+        <ValuePillarsSection />
+      </AnimatedSection>
+      {/*<ValuePillarsSection />*/}
       <AboutUsSection />
       <SolutionsSection />
       <TechnologiesSection />
