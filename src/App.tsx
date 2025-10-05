@@ -50,7 +50,7 @@ const AppContent = () => {
   }, [i18n.language]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LionHeart">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Index />} />
