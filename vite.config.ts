@@ -1,8 +1,10 @@
 // vite.config.ts
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";   // <-- correct (has @)
+import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/LionHeart/", // <-- important for GitHub Pages
+  resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
+  base: "/LionHeart/",
 });
