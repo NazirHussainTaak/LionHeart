@@ -71,12 +71,12 @@ export default {
         // heading: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
 
         // --- Active (Space Grotesk for both body + headings) ---
-         sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
-         heading: ['Space Grotesk', 'Poppins', 'Inter', 'system-ui', 'sans-serif'],
+        // sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        // heading: ['Space Grotesk', 'Poppins', 'Inter', 'system-ui', 'sans-serif'],
 
         // --- Alternative 1: Orbitron (futuristic headings, clean body) ---
         // sans: ['Inter', 'system-ui', 'sans-serif'], // keep body text clean
-       // heading: ['Orbitron', 'sans-serif'],
+        // heading: ['Orbitron', 'sans-serif'],
 
 
         // --- Alternative 2: Rajdhani ---
@@ -88,8 +88,8 @@ export default {
         // heading: ['Exo 2', 'sans-serif'],
 
         // --- Alternative 4: IBM Plex Sans ---
-        // sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
-        // heading: ['IBM Plex Sans', 'sans-serif'],
+         sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+         heading: ['IBM Plex Sans', 'sans-serif'],
 
         // --- Alternative 5: Montserrat ---
         // sans: ['Montserrat', 'system-ui', 'sans-serif'],
