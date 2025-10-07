@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-8 pt-8 border-t border-border"
+              className="flex flex-wrap items-center gap-8 pt-8"
             >
               {stats.map((stat, index) => (
                 <motion.div 
