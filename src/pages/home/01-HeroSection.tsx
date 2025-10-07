@@ -35,13 +35,13 @@ const HeroSection: React.FC = () => {
 
           <div className="relative z-10">
               
-           <motion.h1
+           <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6 text-foreground"
             >
-              {t('hero.headline.prefix')}
+              {t('hero.headline.prefix')}{" "}
               <span className="text-gradient">{t('hero.headline.highlight')}{" "}</span>
               {t('hero.headline.suffix')}
             </motion.h1>
@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-               className="flex flex-wrap items-center gap-8 pt-8"
+              className="flex flex-wrap items-center gap-8 pt-8 border-t border-border"
             >
               {stats.map((stat, index) => (
                 <motion.div 

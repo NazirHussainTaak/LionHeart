@@ -39,12 +39,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 18, filter: "blur(2px)" },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    filter: "blur(0px)", 
-    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as any } 
-  },
+  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
 };
 
 // -- UI ------------------------------------------------------------------------
@@ -61,7 +56,7 @@ const PillarCard: React.FC<{ title: string; description: string; iconName?: stri
       variants={itemVariants}
       whileHover={reduce ? undefined : { y: -6, scale: 1.01 }}
       whileTap={reduce ? undefined : { scale: 0.99 }}
-      transition={{ type: "spring" as any, stiffness: 260, damping: 18 }}
+      transition={{ type: "spring", stiffness: 260, damping: 18 }}
       className="h-full"
     >
       <Card className="card-elevated h-full text-center bg-white dark:bg-neutral-900 transition-shadow hover:shadow-lg">
@@ -71,7 +66,7 @@ const PillarCard: React.FC<{ title: string; description: string; iconName?: stri
             aria-hidden="true"
             className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20"
             whileHover={reduce ? undefined : { rotate: 3 }}
-            transition={{ type: "spring" as any, stiffness: 200, damping: 12 }}
+            transition={{ type: "spring", stiffness: 200, damping: 12 }}
           >
             <Icon className="h-8 w-8 text-primary" />
           </motion.div>
