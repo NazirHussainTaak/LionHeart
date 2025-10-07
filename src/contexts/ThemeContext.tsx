@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type ThemeMode = 'light' | 'dark' | 'auto';
-type ColorTheme = 'default' | 'ocean' | 'forest' | 'sunset' | 'royal' | 'slate' ;
+type ColorTheme = 'default' | 'ocean' | 'forest' | 'sunset' | 'royal' | 'slate';
 
 interface ThemeContextType {
   mode: ThemeMode;

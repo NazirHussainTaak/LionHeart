@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Threat Intelligence Management",
+    "subtitle": "Stay ahead of emerging cyber threats with actionable intelligence. Make informed security decisions based on real-time threat data.",
+    "ctaPrimary": "Explore Platform",
+    "ctaSecondary": "Intelligence Feed"
+  },
+  "overview": {
+    "title": "Advanced Threat Intelligence",
+    "description": "Leverage threat intelligence platforms to identify, analyze, and respond to cyber threats before they impact your organization."
+  },
+  "services": {
+    "title": "Intelligence Services",
+    "items": [
+      {
+        "name": "Threat Intelligence Platforms",
+        "description": "Centralized collection and analysis of threat data"
+      },
+      {
+        "name": "IOC & STIX/TAXII Integration",
+        "description": "Automated sharing of indicators of compromise"
+      },
+      {
+        "name": "Threat Hunting Operations",
+        "description": "Proactive search for threats using intelligence"
+      },
+      {
+        "name": "Intelligence Analysis",
+        "description": "Expert analysis and contextualization of threats"
+      },
+      {
+        "name": "Threat Landscape Monitoring",
+        "description": "Track emerging threats and adversary tactics"
+      },
+      {
+        "name": "Custom Threat Feeds",
+        "description": "Industry-specific and customized intelligence feeds"
+      }
+    ]
+  }
+}

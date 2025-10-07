@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Cloud Solutions",
+    "subtitle": "Transform your business with scalable, secure, and cost-effective cloud infrastructure. Migrate, optimize, and innovate in the cloud.",
+    "ctaPrimary": "Start Cloud Journey",
+    "ctaSecondary": "Cloud Assessment"
+  },
+  "overview": {
+    "title": "Enterprise Cloud Transformation",
+    "description": "Navigate your cloud journey with confidence. We provide expert guidance and implementation for AWS, Azure, and Google Cloud platforms."
+  },
+  "services": {
+    "title": "Cloud Services",
+    "items": [
+      {
+        "name": "Cloud Migration",
+        "description": "Seamless migration of workloads to public, private, or hybrid cloud"
+      },
+      {
+        "name": "Cloud Architecture",
+        "description": "Design scalable and resilient cloud-native architectures"
+      },
+      {
+        "name": "Multi-Cloud Strategy",
+        "description": "Optimize workloads across multiple cloud providers"
+      },
+      {
+        "name": "Cloud Security",
+        "description": "Implement robust security controls and compliance frameworks"
+      },
+      {
+        "name": "Cost Optimization",
+        "description": "Reduce cloud spending while improving performance"
+      },
+      {
+        "name": "Managed Cloud Services",
+        "description": "24/7 monitoring and management of your cloud environment"
+      }
+    ]
+  }
+}

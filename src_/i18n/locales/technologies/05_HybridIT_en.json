@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Hybrid IT Management",
+    "subtitle": "Seamlessly manage on-premises and cloud infrastructure from a single pane of glass. The best of both worlds, unified.",
+    "ctaPrimary": "Hybrid Strategy",
+    "ctaSecondary": "Management Demo"
+  },
+  "overview": {
+    "title": "Unified Hybrid Infrastructure",
+    "description": "Gain complete visibility and control over your hybrid IT environment. Optimize workload placement and streamline operations across on-premises, cloud, and edge."
+  },
+  "services": {
+    "title": "Hybrid IT Services",
+    "items": [
+      {
+        "name": "Hybrid Cloud Management",
+        "description": "Unified management across public and private clouds"
+      },
+      {
+        "name": "Workload Optimization",
+        "description": "Place workloads in the most cost-effective location"
+      },
+      {
+        "name": "Multi-Cloud Integration",
+        "description": "Connect and orchestrate multiple cloud platforms"
+      },
+      {
+        "name": "Cloud Connectivity",
+        "description": "High-speed, secure connections between environments"
+      },
+      {
+        "name": "Automation & Orchestration",
+        "description": "Automate provisioning and management tasks"
+      },
+      {
+        "name": "Cost Management",
+        "description": "Track and optimize spending across all environments"
+      }
+    ]
+  }
+}

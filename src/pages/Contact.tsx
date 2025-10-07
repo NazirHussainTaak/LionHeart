@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, Send, ExternalLink, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,27 +10,60 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
+import { detectServiceKeywords, getSolutionAreaFromKeywords } from "@/utils/formKeywordDetection";
 
 const Contact = () => {
   const location = useLocation();
   const vendorName = location.state?.vendor;
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [messageValue, setMessageValue] = useState("");
+  const [suggestedService, setSuggestedService] = useState("");
   const { toast } = useToast();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (messageValue.length > 10) {
+      const detectedServices = detectServiceKeywords(messageValue);
+      const suggestion = getSolutionAreaFromKeywords(detectedServices);
+      if (suggestion && suggestion !== suggestedService) {
+        setSuggestedService(suggestion);
+      }
+    }
+  }, [messageValue, suggestedService]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    // Generate WhatsApp message
+    const whatsappMessage = `Hello Lion Heart Team,\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage: ${data.message}`;
+    const whatsappUrl = `https://wa.me/971555589672?text=${encodeURIComponent(whatsappMessage)}`;
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     toast({
-      title: "Message Sent Successfully",
-      description: "Thanks! Our team will reach out within one business day (GST).",
+      title: i18n.language === "ar" ? "تم إرسال الرسالة بنجاح" : "Message Sent Successfully",
+      description: i18n.language === "ar" 
+        ? "شكراً! سيتواصل معك فريقنا خلال يوم عمل واحد (توقيت الخليج)."
+        : "Thanks! Our team will reach out within one business day (GST).",
     });
 
     setIsSubmitting(false);
+    setMessageValue("");
+    setSuggestedService("");
     (e.target as HTMLFormElement).reset();
+
+    // Optional: Open WhatsApp
+    // window.open(whatsappUrl, "_blank");
   };
 
   const solutionAreas = [
@@ -144,7 +177,7 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="interest">Area of Interest</Label>
-                    <Select name="interest">
+                    <Select name="interest" value={suggestedService} onValueChange={setSuggestedService}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your primary interest" />
                       </SelectTrigger>
@@ -156,6 +189,11 @@ const Contact = () => {
                         ))}
                       </SelectContent>
                     </Select>
+                    {suggestedService && (
+                      <p className="text-xs text-primary">
+                        ✨ Auto-detected: {solutionAreas.find(a => a.toLowerCase().replace(/\s+/g, '-') === suggestedService)}
+                      </p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -165,6 +203,8 @@ const Contact = () => {
                       name="message"
                       required
                       rows={5}
+                      value={messageValue}
+                      onChange={(e) => setMessageValue(e.target.value)}
                       placeholder={
                         vendorName 
                           ? `I'm interested in ${vendorName}. Tell us more about your requirements...`

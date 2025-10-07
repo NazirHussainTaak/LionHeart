@@ -36,7 +36,7 @@ const fadeUp = (delay = 0, distance = 22, duration = 1.0): Variants => ({
 const hoverLift = {
   whileHover: { y: -6, scale: 1.02 },
   whileTap: { scale: 0.98 },
-  transition: { type: "spring", stiffness: 160, damping: 18 },
+  transition: { type: "spring" as any, stiffness: 160, damping: 18 },
 };
 
 // ── Types and Icons ──────────────────────────────────────────────────────────

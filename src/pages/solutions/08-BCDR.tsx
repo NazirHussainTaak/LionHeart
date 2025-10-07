@@ -2,16 +2,22 @@ import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
 import heroImage from "@/assets/solution/08-BCDR.jpg";
 
 const BCDR = () => {
-  const { t } = useTranslation('bcdr');
+  const { t, i18n } = useTranslation('bcdr');
+  const isAr = i18n.language === "ar";
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950">
-
-      {/* Hero Section with Image */}
-      {/*<section className="relative section-padding overflow-hidden bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">*/}
+    <>
+      <SEOHead
+        title={isAr ? "استمرارية الأعمال والاسترداد - Lion Heart" : "Business Continuity & Disaster Recovery - Lion Heart"}
+        description={isAr ? "حلول BCDR من Lion Heart في دبي" : "BCDR solutions from Lion Heart in Dubai, UAE"}
+        keywords={isAr ? "BCDR, استمرارية الأعمال, دبي" : "BCDR, business continuity, Dubai, UAE"}
+      />
+      <div className="min-h-screen bg-white dark:bg-neutral-950">
+        
       <section className="relative section-padding overflow-hidden hero-pattern lion-geometric bg-spring-wood dark:bg-neutral-950 ">
         <div className="container-width">
           <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
@@ -94,7 +100,8 @@ const BCDR = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
